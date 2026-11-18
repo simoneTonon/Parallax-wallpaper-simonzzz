@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow: hidden;
+  font-size: clamp(14px, 3.5vw, 22px);
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 200rem;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 2.5rem
+}
+
+#title {
+  background-image: url("https://picsum.photos/640/480");
+  z-index:3;
+}
+
+#title h1 {
+ transform: translateZ(40rem) translateY(7.5rem);
+ transform-origin: 50% 100%
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 .2rem .2rem #000;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.title {
+  width: 50rem;
+  max-width: 700px;
+  padding: 1rem;
+  border-radius: .75rem;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8rem rgba(0, 0, 0, .7);
+  z-index: 2;
+  position: relative;
+}
+
+.title:not(#slide2 .title) {
+  transform: translateZ(-100rem) scale(1.5);
+}
+
+.slide {
+  position: relative;
+  padding: 10rem 0;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+	transform-style: inherit;
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, .7);
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+#slide1:before {
+  background-image: url("https://picsum.photos/960/520");
+  transform: translateZ(-200rem) scale(2);
+}
+
+#slide2 {
+  background-image: url("https://picsum.photos/960/400");
+  z-index: 2;
+}
+
+#slide3:before {
+  background-image: url("https://picsum.photos/980/600");
+  transform: translateZ(-200rem) scale(2);
+}
+
+#slide4 {
+  background: #222;
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 10rem;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 30rem;
+  height: 16rem;
+  transform: translateZ(80rem) scale(.5) translateX(-94%) translateY(-120%) rotate(2deg);
+  padding: .5rem;
+  border-radius: .25rem;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8rem rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(100rem) scale(.3) translateX(-104%) translateY(-60%) rotate(-5deg);
+}
+
