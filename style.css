@@ -3,13 +3,13 @@
 html {
   height: 100%;
   overflow: hidden;
-  font-size: clamp(40px, 1vw, 100px);
+  font-size: clamp(40px, 2vw, 80px);
 }
 
 body { 
   margin:0;
   padding:0;
-	perspective: 200rem;
+	perspective: 100rem;
 	transform-style: preserve-3d;
   height: 100%;
   overflow-y: scroll;
@@ -18,11 +18,11 @@ body {
 }
 
 h1 {
-   font-size: 2rem
+   font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
 p {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 1.5rem);
   line-height: 1.5;
   color: #333;
 }
@@ -33,7 +33,7 @@ p {
 }
 
 #title h1 {
- transform: translateZ(40rem);
+ transform: translateZ(20rem);
  transform-origin: 50% 100%;
 }
 
@@ -44,9 +44,8 @@ p {
 }
 
 .title {
-  top:7.5rem;
   width: 50rem;
-  max-width: 45%;
+  max-width: 65%;
   padding: 1rem;
   border-radius: .75rem;
   background: rgba(240,230,220, .7);
@@ -56,16 +55,12 @@ p {
 }
 
 .title:not(#slide2 .title) {
-  transform: translateZ(-100rem) scale(1.5);
+  transform: translateZ(-25rem) scale(1.25);
 }
 
 #slide2 .title {
   top:0;
   transform: translateY(-7.5rem) scale(1);
-}
-
-#slide3 .title {
-  top:7.5rem;
 }
 
 .slide {
@@ -93,7 +88,7 @@ p {
 
 #slide1:before {
   background-image: url("https://picsum.photos/960/520");
-  transform: translateZ(-200rem) scale(2);
+  transform: translateZ(-100rem) scale(2);
 }
 
 #slide2 {
@@ -103,7 +98,7 @@ p {
 
 #slide3:before {
   background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-200rem) scale(2);
+  transform: translateZ(-100rem) scale(2);
 }
 
 #slide4 {
@@ -122,11 +117,11 @@ p {
 
 img {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 10%;
   width: 25rem;
   height: 16rem;
-  transform: translateZ(40rem) scale(.5) translateY(5rem) rotate(2deg);
+  transform: translateZ(20rem) scale(.5) translateY(5rem) rotate(2deg);
   padding: .5rem;
   border-radius: .25rem;
   background: rgba(240,230,220, .7);
@@ -135,7 +130,7 @@ img {
 
 img:last-of-type {
   left:5%;
-  transform: translateZ(50rem) scale(.3) translateY(-5rem) rotate(-5deg);
+  transform: translateZ(25rem) scale(.3) translateY(-5rem) rotate(-5deg);
 }
 
 a{
