@@ -3,7 +3,7 @@
 html {
   height: 100%;
   overflow: hidden;
-  font-size: clamp(14px, 3.5vw, 22px);
+  font-size: clamp(40px, 1vw, 100px);
 }
 
 body { 
@@ -18,7 +18,13 @@ body {
 }
 
 h1 {
-   font-size: 2.5rem
+   font-size: 2rem
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
 }
 
 #title {
@@ -27,8 +33,8 @@ h1 {
 }
 
 #title h1 {
- transform: translateZ(40rem) translateY(7.5rem);
- transform-origin: 50% 100%
+ transform: translateZ(40rem);
+ transform-origin: 50% 100%;
 }
 
 .header {
@@ -37,15 +43,10 @@ h1 {
   text-shadow: 0 .2rem .2rem #000;
 }
 
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #333;
-}
-
 .title {
+  top:7.5rem;
   width: 50rem;
-  max-width: 700px;
+  max-width: 45%;
   padding: 1rem;
   border-radius: .75rem;
   background: rgba(240,230,220, .7);
@@ -56,6 +57,15 @@ p {
 
 .title:not(#slide2 .title) {
   transform: translateZ(-100rem) scale(1.5);
+}
+
+#slide2 .title {
+  top:0;
+  transform: translateY(-7.5rem) scale(1);
+}
+
+#slide3 .title {
+  top:7.5rem;
 }
 
 .slide {
@@ -107,16 +117,16 @@ p {
 
 .slide:nth-child(2n+1) .title {
   margin-left: auto;
-  margin-right: 10rem;
+  margin-right: 5rem;
 }
 
 img {
   position: absolute;
   top: 50%;
-  left: 35%;
-  width: 30rem;
+  left: 10%;
+  width: 25rem;
   height: 16rem;
-  transform: translateZ(80rem) scale(.5) translateX(-94%) translateY(-120%) rotate(2deg);
+  transform: translateZ(40rem) scale(.5) translateY(5rem) rotate(2deg);
   padding: .5rem;
   border-radius: .25rem;
   background: rgba(240,230,220, .7);
@@ -124,7 +134,8 @@ img {
 }
 
 img:last-of-type {
-  transform: translateZ(100rem) scale(.3) translateX(-104%) translateY(-60%) rotate(-5deg);
+  left:5%;
+  transform: translateZ(50rem) scale(.3) translateY(-5rem) rotate(-5deg);
 }
 
 a{
